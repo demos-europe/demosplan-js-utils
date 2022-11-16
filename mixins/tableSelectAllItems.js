@@ -28,7 +28,7 @@
  *   @items-toggled="handleToggleItem" />
  */
 
-import { uniqueArrayByObjectKey } from 'demosplan-utils'
+import { uniqueArrayByObjectKey } from '../index'
 
 export default {
   data () {
