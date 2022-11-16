@@ -33,6 +33,7 @@ import initGlobalEventListener from './lib/GlobalEventListener'
 import MatchMedia from './lib/MatchMedia'
 import NotificationStoreAdapter from './lib/NotificationStoreAdapter'
 import Pager from './lib/Pager'
+import prefixClass from './utils/prefixClass'
 import SideNav from './lib/SideNav'
 import sortAlphabetically from './utils/sortAlphabetically'
 import Stickier from './lib/Stickier'
@@ -82,6 +83,7 @@ export {
   MatchMedia,
   mimeTypes,
   NotificationStoreAdapter,
+  prefixClass,
   Pager,
   SideNav,
   Stickier,
