@@ -13,7 +13,10 @@
  * Up to date documentation and usage examples can be found here:
  * https://yaits.demos-deutschland.de/w/demosplan/frontend-documentation/frontend-validierung/
  */
-import { assignHandlersForInputs, hasOwnProp, validateForm } from '../index'
+
+import { assignHandlersForInputs } from '../lib/validation/utils/assignHandlersForInputs'
+import hasOwnProp from '../utils/hasOwnProp'
+import validateForm from '../lib/validation/utils/validateForm'
 import { errorClass, scrollToVisibleElement } from '../lib/validation/utils/helpers'
 
 export default {
