@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="695fdede-39db-4f14-b107-458e13600abd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ActionMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ActionMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DpApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DpApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/HighlightHashLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/HighlightHashLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/TableWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/TableWrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ToggleAnything.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ToggleAnything.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Tooltips.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Tooltips.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validation/dpValidateMultiselectDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validation/dpValidateMultiselectDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validation/utils/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validation/utils/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mixins/dpValidateMixin.js" beforeDir="false" afterPath="$PROJECT_DIR$/mixins/dpValidateMixin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mixins/prefixClassMixin.js" beforeDir="false" afterPath="$PROJECT_DIR$/mixins/prefixClassMixin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mixins/tableSelectAllItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/mixins/tableSelectAllItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/hasOwnProp.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/hasOwnProp.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HchOG9AQoCt72VsPg4fqWaPYxh" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/florian/Dev/demosplan-js-utils&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/utils" />
+      <recent name="$PROJECT_DIR$/mixins" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="695fdede-39db-4f14-b107-458e13600abd" name="Changes" comment="" />
+      <created>1668590245180</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668590245180</updated>
+      <workItem from="1668590246333" duration="8440000" />
+      <workItem from="1668778972514" duration="3627000" />
+    </task>
+    <task id="LOCAL-00001" summary="fix: Resolve path issues &#10;&#10;raised by moving a bunch of code from different Reposes&#10;which made it impossible to test the code when merging">
+      <created>1668597650634</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668597650634</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix: Adjust wrong pagagename">
+      <created>1668597825002</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668597825002</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: Correct pathes for imports&#10;&#10;something got realy messed up during c/p">
+      <created>1668611374547</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668611374548</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: Bump Version to 0.0.2">
+      <created>1668611584353</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668611584353</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: Add Changelog">
+      <created>1668611874813</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668611874813</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix: Resolve path issues &#10;&#10;raised by moving a bunch of code from different Reposes&#10;which made it impossible to test the code when merging" />
+    <MESSAGE value="fix: Adjust wrong pagagename" />
+    <MESSAGE value="fix: Correct pathes for imports&#10;&#10;something got realy messed up during c/p" />
+    <MESSAGE value="chore: Bump Version to 0.0.2" />
+    <MESSAGE value="chore: Add Changelog" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: Add Changelog" />
+  </component>
+</project>

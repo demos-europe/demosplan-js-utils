@@ -1,0 +1,14 @@
+Index: mixins/prefixClassMixin.js
+===================================================================
+diff --git a/mixins/prefixClassMixin.js b/mixins/prefixClassMixin.js
+--- a/mixins/prefixClassMixin.js	
++++ b/mixins/prefixClassMixin.js	
+@@ -11,7 +11,7 @@
+  * This mixin can be to provide the prefixClass method and a prop to control when to prefix and when not.
+  *
+  */
+-import { prefixClass } from '../index'
++import prefixClass from '../utils/prefixClass'
+ 
+ export default {
+   methods: {
