@@ -9,10 +9,12 @@
 
 import dpSelectAllMixin from './dpSelectAllMixin'
 import dpValidateMixin from './dpValidateMixin'
+import prefixClassMixin from './prefixClassMixin'
 import tableSelectAllItems from './tableSelectAllItems'
 
 export {
   dpSelectAllMixin,
   dpValidateMixin,
+  prefixClassMixin,
   tableSelectAllItems
 }
