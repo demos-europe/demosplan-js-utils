@@ -21,6 +21,8 @@ import Confirm from './lib/DpConfirm'
 import debounce from './utils/debounce'
 import deepMerge from './utils/deepMerge'
 import Detabinator from './lib/Detabinator'
+import dpSelectAllMixin from './mixins/dpSelectAllMixin'
+import dpValidateMixin from './mixins/dpValidateMixin'
 import FloodControlField from './lib/FloodControlField'
 import { FormActions } from './lib/FormActions'
 import formatBytes from './utils/formatBytes'
@@ -34,10 +36,12 @@ import MatchMedia from './lib/MatchMedia'
 import NotificationStoreAdapter from './lib/NotificationStoreAdapter'
 import Pager from './lib/Pager'
 import prefixClass from './utils/prefixClass'
+import prefixClassMixin from './mixins/prefixClassMixin'
 import SideNav from './lib/SideNav'
 import sortAlphabetically from './utils/sortAlphabetically'
 import Stickier from './lib/Stickier'
 import Sticky from './lib/Sticky'
+import tableSelectAllItems from './mixins/tableSelectAllItems'
 import TableWrapper from './lib/TableWrapper'
 import Tabs from './lib/Tabs'
 import throttle from './utils/throttle'
@@ -62,6 +66,8 @@ export {
   Detabinator,
   dpApi,
   dpRpc,
+  dpSelectAllMixin,
+  dpValidateMixin,
   formatBytes,
   formatDate,
   FloodControlField,
@@ -84,11 +90,13 @@ export {
   mimeTypes,
   NotificationStoreAdapter,
   prefixClass,
+  prefixClassMixin,
   Pager,
   SideNav,
   Stickier,
   Sticky,
   sortAlphabetically,
+  tableSelectAllItems,
   TableWrapper,
   Tabs,
   ToggleAnything,
