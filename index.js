@@ -24,7 +24,7 @@ import Detabinator from './lib/Detabinator'
 import dpSelectAllMixin from './mixins/dpSelectAllMixin'
 import dpValidateMixin from './mixins/dpValidateMixin'
 import FloodControlField from './lib/FloodControlField'
-import { FormActions } from './lib/FormActions'
+import { addFormHiddenField, FormActions, removeFormHiddenField } from './lib/FormActions'
 import formatBytes from './utils/formatBytes'
 import getAnimationEventName from './utils/getAnimationEventName'
 import getCssVariable from './lib/DpGetCssVariable'
@@ -53,6 +53,7 @@ import uniqueArrayByObjectKey from './utils/uniqueArrayByObjectKey'
 
 export {
   ActionMenu,
+  addFormHiddenField,
   AnimateById,
   bindFullScreenChange,
   changeUrlforPager,
@@ -92,6 +93,7 @@ export {
   prefixClass,
   prefixClassMixin,
   Pager,
+  removeFormHiddenField,
   SideNav,
   Stickier,
   Sticky,
