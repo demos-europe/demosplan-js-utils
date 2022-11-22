@@ -14,10 +14,10 @@
  * https://yaits.demos-deutschland.de/w/demosplan/frontend-documentation/frontend-validierung/
  */
 
+import { errorClass, scrollToVisibleElement } from '../lib/validation/utils/helpers'
 import { assignHandlersForInputs } from '../lib/validation/utils/assignHandlersForInputs'
 import hasOwnProp from '../utils/hasOwnProp'
 import validateForm from '../lib/validation/utils/validateForm'
-import { errorClass, scrollToVisibleElement } from '../lib/validation/utils/helpers'
 
 export default {
   data () {
