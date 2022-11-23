@@ -1,12 +1,3 @@
-/**
- * (c) 2010-present DEMOS E-Partizipation GmbH.
- *
- * This file is part of the package @demos-europe/demosplan-js-utils,
- * for more information see the license file.
- *
- * All rights reserved
- */
-
 /*
  * This is the dpValidate vue mixin that allows us to validate inputs in vue components. It is to be used in vue components. To use it in vanilla JS-context see: @DemosPlanCoreBundle/lib/validation/dpValidate.js
  *

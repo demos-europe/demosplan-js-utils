@@ -1,12 +1,3 @@
-/**
- * (c) 2010-present DEMOS E-Partizipation GmbH.
- *
- * This file is part of the package @demos-europe/demosplan-js-utils,
- * for more information see the license file.
- *
- * All rights reserved
- */
-
 import { bindFullScreenChange, isActiveFullScreen, toggleFullscreen, unbindFullScreenChange } from './utils/fullscreen'
 import { checkResponse, dpApi, dpRpc, handleResponseMessages, makeFormPost } from './lib/DpApi'
 import { convertSize, getFileInfo, getFileTypes, mimeTypes } from './lib/FileInfo'
