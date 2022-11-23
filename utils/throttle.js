@@ -1,13 +1,4 @@
 /**
- * (c) 2010-present DEMOS E-Partizipation GmbH.
- *
- * This file is part of the package @demos-europe/demosplan-js-utils,
- * for more information see the license file.
- *
- * All rights reserved
- */
-
-/**
  * Throttle calls to a function. Arguments and context are preserved.
  * @param func
  * @param limit the interval to allow execution in

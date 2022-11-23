@@ -1,13 +1,4 @@
 /**
- * (c) 2010-present DEMOS E-Partizipation GmbH.
- *
- * This file is part of the package @demos-europe/demosplan-js-utils,
- * for more information see the license file.
- *
- * All rights reserved
- */
-
-/**
  * This is a wrapper lib to provide simple functions for accessing the Fullscreen Api.
  * Due to the different implementations of browsers, we chose to use the fscreen polyfill
  * rather than handling stuff by ourselves.

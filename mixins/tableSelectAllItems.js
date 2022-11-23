@@ -1,12 +1,3 @@
-/**
- * (c) 2010-present DEMOS E-Partizipation GmbH.
- *
- * This file is part of the package @demos-europe/demosplan-js-utils,
- * for more information see the license file.
- *
- * All rights reserved
- */
-
 /*
  * This mixin is intended to be used along with DpDataTable and can be used to select a single item or all items over multiple pages.
  * To show additional information about selected items, you can use DpBulkEditHeader.
