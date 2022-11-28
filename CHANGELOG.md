@@ -2,6 +2,12 @@
 
 ## UNRELEASED
 
+2022-11-23
+
+### Bug Fixes
+
+- Add missing packages & dependency lock file
+
 ## v0.0.3
 
 2022-11-22
