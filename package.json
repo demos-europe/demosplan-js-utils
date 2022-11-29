@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "license": "MIT",
   "private": false,
-  "description": "Utility Methods used in demosplan to simplify life",
+  "description": "Utility Methods used in demosplan to simplify life.",
   "dependencies": {
     "axios": "^0.27.2",
     "fscreen": "^1.2.0",
