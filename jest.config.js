@@ -2,7 +2,7 @@
 module.exports = {
   testEnvironment: 'jsdom',
   testEnvironmentOptions: {
-    customExportConditions: ["node"],
+    customExportConditions: ['node'],
   },
   moduleFileExtensions: ["js"],
   transform: {
