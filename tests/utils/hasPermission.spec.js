@@ -4,7 +4,7 @@ window.dplan = {
   permissions: {
     myPermission: true,
     notMyPermission: false,
-    someOtherPremission: true,
+    someOtherPermission: true,
     andIcanAccessEverything: true,
     youShallNotPass: false
   }
@@ -16,7 +16,7 @@ describe.each([
   { permission: null, result: false },
   { permission: 'notIntheList', result: false },
   { permission: ['myPermission'], result: true },
-  { permission: ['myPermission', 'someOtherPremission'], result: false },
+  { permission: ['myPermission', 'someOtherPermission'], result: false },
 ])('hasPermission - check access rights for one permission', ({ permission, result}) => {
   test(`returns ${result} for testcase with prop ${permission}`, () => {
     expect(hasPermission(permission)).toBe(result)
@@ -25,7 +25,7 @@ describe.each([
 
 describe.each([
   { permission: ['myPermission', 'notHere', 'andNothingHere'], result: true },
-  { permission: ['myPermission', 'andIcanAccessEverything', 'someOtherPremission'], result: true },
+  { permission: ['myPermission', 'andIcanAccessEverything', 'someOtherPermission'], result: true },
   { permission: ['youShallNotPass', 'notMyPermission'], result: false },
 ])('hasPermission - check any access rights', ({ permission, result}) => {
     test(`returns '${result}' for testcase with prop '${permission}'`, () => {
@@ -44,7 +44,7 @@ describe.each([
 
 describe.each([
   { permission: ['myPermission', 'notHere', 'andNothingHere'], result: false },
-  { permission: ['myPermission', 'andIcanAccessEverything', 'someOtherPremission'], result: true },
+  { permission: ['myPermission', 'andIcanAccessEverything', 'someOtherPermission'], result: true },
   { permission: ['youShallNotPass', 'notMyPermission'], result: false },
 ])('hasPermission - check all access rights', ({ permission, result}) => {
   test(`returns '${result}' for testcase with prop '${permission}'`, () => {
