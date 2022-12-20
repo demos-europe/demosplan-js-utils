@@ -4,7 +4,7 @@ module.exports = {
   testEnvironmentOptions: {
     customExportConditions: ['node'],
   },
-  moduleFileExtensions: ["js"],
+  moduleFileExtensions: ['js'],
   transform: {
     '^.+\\.(js)$': 'babel-jest',
   }
