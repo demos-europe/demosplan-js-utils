@@ -2,9 +2,9 @@
 module.exports = {
   testEnvironment: 'jsdom',
   testEnvironmentOptions: {
-    customExportConditions: ["node"],
+    customExportConditions: ['node'],
   },
-  moduleFileExtensions: ["js"],
+  moduleFileExtensions: ['js'],
   transform: {
     '^.+\\.(js)$': 'babel-jest',
   }
