@@ -5,13 +5,13 @@ describe('changeUrlforPager', () => {
     global.window = Object.create(window);
   })
 
-  it('should set givven Values if there are none already set', () => {
+  it('should set given values if there are none already set', () => {
     const url = changeUrlforPager({ count: 2, current_page: 1 })
 
     expect(url[1]).toBe("r_limit=2&page=1")
   })
 
-  it('should overwrite givven Values if there are values already set', () => {
+  it('should overwrite given values if there are values already set', () => {
     const url = "http://dummy.com?r_limit=2&page=5";
     Object.defineProperty(window, 'location', {
       value: {
@@ -24,7 +24,7 @@ describe('changeUrlforPager', () => {
     expect(updatedUrl[1]).toBe('r_limit=3&page=3')
   })
 
-  it('should overwrite givven limit if that is the only param', () => {
+  it('should overwrite given limit if that is the only param', () => {
     const url = "http://dummy.com?r_limit=2";
     Object.defineProperty(window, 'location', {
       value: {
@@ -37,7 +37,7 @@ describe('changeUrlforPager', () => {
     expect(updatedUrl[1]).toBe('r_limit=3&page=3')
   })
 
-  it('should overwrite givven pge if that is the only param', () => {
+  it('should overwrite given page if that is the only param', () => {
     const url = "http://dummy.com?page=2";
     Object.defineProperty(window, 'location', {
       value: {
@@ -63,7 +63,7 @@ describe('changeUrlforPager', () => {
     expect(updatedUrl[1]).toBe('r_limit=3&page=3')
   })
 
-  it('should work even if there are other params otr the order ist mixed', () => {
+  it('should work even if there are other params or the order is mixed', () => {
     const url = "http://dummy.com?test=tete&page=3&y=2&r_limit=3";
     Object.defineProperty(window, 'location', {
       value: {
