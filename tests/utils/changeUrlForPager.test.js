@@ -63,7 +63,7 @@ describe('changeUrlforPager', () => {
     expect(updatedUrl[1]).toBe('r_limit=3&page=3')
   })
 
-  it('should work even if there are other params otr the order ist mixed', () => {
+  it('should work even if there are other params or the order is mixed', () => {
     const url = "http://dummy.com?test=tete&page=3&y=2&r_limit=3";
     Object.defineProperty(window, 'location', {
       value: {
