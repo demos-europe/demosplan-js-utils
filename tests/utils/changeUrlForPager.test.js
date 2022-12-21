@@ -5,7 +5,7 @@ describe('changeUrlforPager', () => {
     global.window = Object.create(window);
   })
 
-  it('should set givven Values if there are none already set', () => {
+  it('should set given values if there are none already set', () => {
     const url = changeUrlforPager({ count: 2, current_page: 1 })
 
     expect(url[1]).toBe("r_limit=2&page=1")
