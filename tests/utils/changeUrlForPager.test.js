@@ -11,7 +11,7 @@ describe('changeUrlforPager', () => {
     expect(url[1]).toBe("r_limit=2&page=1")
   })
 
-  it('should overwrite givven Values if there are values already set', () => {
+  it('should overwrite given values if there are values already set', () => {
     const url = "http://dummy.com?r_limit=2&page=5";
     Object.defineProperty(window, 'location', {
       value: {
