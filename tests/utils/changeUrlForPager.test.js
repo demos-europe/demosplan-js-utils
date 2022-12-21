@@ -24,7 +24,7 @@ describe('changeUrlforPager', () => {
     expect(updatedUrl[1]).toBe('r_limit=3&page=3')
   })
 
-  it('should overwrite givven limit if that is the only param', () => {
+  it('should overwrite given limit if that is the only param', () => {
     const url = "http://dummy.com?r_limit=2";
     Object.defineProperty(window, 'location', {
       value: {
