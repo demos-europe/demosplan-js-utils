@@ -8,8 +8,6 @@
 function changeUrlforPager ({ count, current_page }) {
   const url = window.location.href.split('?')
 
-  console.log('url: ', url)
-
   if (typeof url[1] !== 'undefined') {
     if (url[1].match('r_limit') !== null) {
       url[1] = url[1].replace(/r_limit=(\d*)($|&)/g, (hit) => `r_limit=${count}&`)
@@ -25,8 +23,6 @@ function changeUrlforPager ({ count, current_page }) {
   } else {
     url[1] = `r_limit=${count}&page=${current_page}`
   }
-
-  console.log('url after: ', url)
 
   return url
 }
