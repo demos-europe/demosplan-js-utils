@@ -26,6 +26,8 @@ function changeUrlforPager ({ count, current_page }) {
     url[1] = `r_limit=${count}&page=${current_page}`
   }
 
+  console.log('url after: ', url)
+
   return url
 }
 
