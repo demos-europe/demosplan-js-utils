@@ -1,5 +1,5 @@
-import { formatDate } from "../utils/date"
-import dayjs from "dayjs"
+import { formatDate } from '../utils/date'
+import dayjs from 'dayjs'
 
 describe('formatDate function', () => {
     it('sets the short date format as a default value', () => {
