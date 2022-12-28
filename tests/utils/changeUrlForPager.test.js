@@ -8,7 +8,7 @@ describe('changeUrlforPager', () => {
     currentPage: 3
   }
   let urlParts = {
-    part1: 'http://dummy.com',
+    part1: 'https://dummy.com',
     part2: `r_limit=${urlContent.count}&page=${urlContent.currentPage}`
   }
   beforeAll(() =>  {
