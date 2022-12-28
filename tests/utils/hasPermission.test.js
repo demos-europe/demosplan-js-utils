@@ -5,7 +5,7 @@ window.dplan = {
     myPermission: true,
     notMyPermission: false,
     someOtherPermission: true,
-    andIcanAccessEverything: true,
+    andICanAccessEverything: true,
     youShallNotPass: false
   }
 }
@@ -25,7 +25,7 @@ describe.each([
 
 describe.each([
   { permission: ['myPermission', 'notHere', 'andNothingHere'], result: true },
-  { permission: ['myPermission', 'andIcanAccessEverything', 'someOtherPermission'], result: true },
+  { permission: ['myPermission', 'andICanAccessEverything', 'someOtherPermission'], result: true },
   { permission: ['youShallNotPass', 'notMyPermission'], result: false },
 ])('hasPermission - check any access rights', ({ permission, result}) => {
     test(`returns '${result}' for testcase with prop '${permission}'`, () => {
@@ -44,7 +44,7 @@ describe.each([
 
 describe.each([
   { permission: ['myPermission', 'notHere', 'andNothingHere'], result: false },
-  { permission: ['myPermission', 'andIcanAccessEverything', 'someOtherPermission'], result: true },
+  { permission: ['myPermission', 'andICanAccessEverything', 'someOtherPermission'], result: true },
   { permission: ['youShallNotPass', 'notMyPermission'], result: false },
 ])('hasPermission - check all access rights', ({ permission, result}) => {
   test(`returns '${result}' for testcase with prop '${permission}'`, () => {

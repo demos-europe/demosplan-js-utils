@@ -1,6 +1,6 @@
 import hasOwnProp from '../../utils/hasOwnProp'
 
-const OGwarn = console.warn
+const warning = console.warn
 
 describe.each([
   { obj: null, prop: 'foo', result: false, warn: 0 },
@@ -9,7 +9,7 @@ describe.each([
   { obj: { foo: 'x' }, prop: 'test', result: false, warn: 0 },
   { obj: [], prop: 'foo', result: false, warn: 0 },
   { obj: 42, prop: 'bar', result: false, warn: 1 }
-])('hasOwnProp - a util to shorten Object.prototype.hasOwnPropery', ({ obj, prop, result, warn }) => {
+])('hasOwnProp - a util to shorten Object.prototype.hasOwnProperty', ({ obj, prop, result, warn }) => {
   const warnings = []
 
   beforeEach(() => {
@@ -17,7 +17,7 @@ describe.each([
   })
 
   afterEach(() => {
-    console.warn = OGwarn
+    console.warn = warning
   })
 
   test(`returns ${result} for testcase with prop ${prop}`, () => {
