@@ -36,7 +36,7 @@ describe.each([
 describe.each([
   { permission: null, result: 'error' },
   { permission: undefined, result: 'error' },
-])('hasPermission - check any access rights', ({ permission, result}) => {
+])('hasPermission - check any access rights', ({ permission}) => {
   test(`returns 'Error' for testcase with '${permission}'`, () => {
     expect(() => hasAnyPermissions(permission)).toThrowError('Typeof "permissions" is not an Array')
   })
@@ -55,7 +55,7 @@ describe.each([
 describe.each([
   { permission: null, result: 'error' },
   { permission: undefined, result: 'error' },
-])('hasPermission - check all access rights', ({ permission, result}) => {
+])('hasPermission - check all access rights', ({ permission}) => {
   test(`returns 'Error' for testcase with '${permission}'`, () => {
     expect(() => hasAllPermissions(permission)).toThrowError('Typeof "permissions" is not an Array')
   })
