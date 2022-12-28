@@ -2,65 +2,68 @@ import changeUrlforPager from '../../utils/changeUrlforPager'
 
 describe('changeUrlforPager', () => {
   let defineProp
-  
+  let updatedUrl
+  let urlContent = {
+    count: 3,
+    currentPage: 3
+  }
+  let urlParts = {
+    part1: 'http://dummy.com',
+    part2: `r_limit=${urlContent.count}&page=${urlContent.currentPage}`
+  }
   beforeAll(() =>  {
     global.window = Object.create(window)
-    defineProp = (url) => Object.defineProperty(window, 'location', {
-      value: {
-        href: url
-      }
+    defineProp = (url) => {
+      Object.defineProperty(window, 'location', {
+        value: {
+          href: url
+        }
+      })
+      updatedUrl = changeUrlforPager({
+        count: urlContent.count,
+        current_page: urlContent.currentPage
     })
+      return updatedUrl
+    }
   })
 
-  it('should set given values if there are none already set', () => {
-    const url = changeUrlforPager({ count: 2, current_page: 1 })
-
-    expect(url[1]).toBe("r_limit=2&page=1")
+  it('gives values if no values exists', () => {
+    const url = changeUrlforPager({
+      count: urlContent.count,
+      current_page: urlContent.currentPage
+    })
+    expect(url[1]).toBe(urlParts.part2)
   })
 
-  it('should overwrite given values if there are values already set', () => {
-    const url = "http://dummy.com?r_limit=2&page=5";
+  it('overwrites given values', () => {
+    const url = `${urlParts.part1}?r_limit=2&page=5`;
     defineProp(url)
-
-    const updatedUrl = changeUrlforPager({ count: 3, current_page: 3 })
-    expect(updatedUrl[0]).toBe('http://dummy.com')
-    expect(updatedUrl[1]).toBe('r_limit=3&page=3')
+    expect(updatedUrl[0]).toBe(urlParts.part1)
+    expect(updatedUrl[1]).toBe(urlParts.part2)
   })
 
-  it('should overwrite given limit if that is the only param', () => {
-    const url = "http://dummy.com?r_limit=2";
-    defineProp(url)
-
-    const updatedUrl = changeUrlforPager({ count: 3, current_page: 3 })
-    expect(updatedUrl[0]).toBe('http://dummy.com')
-    expect(updatedUrl[1]).toBe('r_limit=3&page=3')
+  it('overwrites the limit value if it is the only param', () => {
+    defineProp(`${urlParts.part1}?r_limit=2`)
+    expect(updatedUrl[0]).toBe(urlParts.part1)
+    expect(updatedUrl[1]).toBe(urlParts.part2)
   })
 
-  it('should overwrite given page if that is the only param', () => {
-    const url = "http://dummy.com?page=2";
-    defineProp(url)
-
-    const updatedUrl = changeUrlforPager({ count: 3, current_page: 3 })
-    expect(updatedUrl[0]).toBe('http://dummy.com')
-    expect(updatedUrl[1]).toBe('r_limit=3&page=3')
+  it('overwrites the page value if it is the only param', () => {
+    defineProp(`${urlParts.part1}?page=2`)
+    expect(updatedUrl[0]).toBe(urlParts.part1)
+    expect(updatedUrl[1]).toBe(urlParts.part2)
   })
 
-  it('should set params if they are set but undefined', () => {
-    const url = "http://dummy.com?page=&r_limit=";
-    defineProp(url)
-
-    const updatedUrl = changeUrlforPager({ count: 3, current_page: 3 })
-    expect(updatedUrl[0]).toBe('http://dummy.com')
-    expect(updatedUrl[1]).toBe('r_limit=3&page=3')
+  it('sets params if they are undefined', () => {
+    defineProp(`${urlParts.part1}?page=&r_limit=`)
+    expect(updatedUrl[0]).toBe(urlParts.part1)
+    expect(updatedUrl[1]).toBe(urlParts.part2)
   })
 
-  it('should work even if there are other params or the order is mixed', () => {
-    const url = "http://dummy.com?test=tete&page=3&y=2&r_limit=3";
-    defineProp(url)
-
-    const updatedUrl = changeUrlforPager({ count: 1, current_page: 1 })
-    expect(updatedUrl[0]).toBe('http://dummy.com')
-    expect(updatedUrl[1]).toContain('r_limit=1')
-    expect(updatedUrl[1]).toContain('page=1')
+  it('works even if there are other params or the order is mixed', () => {
+    defineProp(`${urlParts.part1}?test=tete&page=${urlContent.currentPage}&y=2&r_limit=${urlContent.count}`)
+    expect(updatedUrl[0]).toBe(urlParts.part1)
+    expect(updatedUrl[1]).toContain(`r_limit=${urlContent.count}`)
+    expect(updatedUrl[1]).toContain(`page=${urlContent.currentPage}`)
   })
 })
