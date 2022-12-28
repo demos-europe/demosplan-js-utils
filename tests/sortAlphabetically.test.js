@@ -37,6 +37,12 @@ describe('sortAlphabetically function', () => {
         expect(sortAlphabetically(mockUsers, 'firstName', 'desc')).toEqual(filteredUsersReverse)
     })
 
+    it('sorts an array of string in alphabetical order by default', () => {
+        const sortedArrayOfString = mockArrayOfString.sort()
+
+        expect(sortAlphabetically(mockArrayOfString, '')).toEqual(sortedArrayOfString)
+    })
+
     it('sorts an array of string in alphabetical order', () => {
         const sortedArrayOfString = mockArrayOfString.sort()
 
