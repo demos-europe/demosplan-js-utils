@@ -9,7 +9,7 @@ describe('sortAlphabetically function', () => {
 
     const mockArrayOfString = [ 'copySpec', 'email2', 'showlist', 'allowedRoleIds' ]
 
-    let filteredArray =  [
+    let filteredUsersByFirstName =  [
         { id: 1031, firstName: 'Daniel', lastName: 'Ostermann' },
         { id: 1035, firstName: 'Katharina', lastName: 'Maier' },
         { id: 1067, firstName: 'Torsten', lastName: 'Wulf' }
@@ -20,21 +20,21 @@ describe('sortAlphabetically function', () => {
     })
 
     it('sorts an object by the property "firstName" in alphabetical order', () => {
-        expect(sortAlphabetically(mockUsers, 'firstName')).toEqual(filteredArray)
+        expect(sortAlphabetically(mockUsers, 'firstName')).toEqual(filteredUsersByFirstName)
     })
 
     it('sorts an object in alphabetical order by default', () => {
-        expect(sortAlphabetically(mockUsers, 'firstName')).toEqual(filteredArray)
+        expect(sortAlphabetically(mockUsers, 'firstName')).toEqual(filteredUsersByFirstName)
     })
 
     it('sorts an object by the property "firstName" in reverse alphabetical order when "desc" parameter is provided', () => {
-        filteredArray =  [
+        const filteredUsersReverse =  [
             { id: 1067, firstName: 'Torsten', lastName: 'Wulf' },
             { id: 1035, firstName: 'Katharina', lastName: 'Maier' },
             { id: 1031, firstName: 'Daniel', lastName: 'Ostermann' }
         ]
 
-        expect(sortAlphabetically(mockUsers, 'firstName', 'desc')).toEqual(filteredArray)
+        expect(sortAlphabetically(mockUsers, 'firstName', 'desc')).toEqual(filteredUsersReverse)
     })
 
     it('sorts an array of string in alphabetical order', () => {
