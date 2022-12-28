@@ -9,7 +9,7 @@ describe('sortAlphabetically function', () => {
 
     const mockArrayOfString = [ 'copySpec', 'email2', 'showlist', 'allowedRoleIds' ]
 
-    let filteredUsersByFirstName =  [
+    const filteredUsersByFirstName =  [
         { id: 1031, firstName: 'Daniel', lastName: 'Ostermann' },
         { id: 1035, firstName: 'Katharina', lastName: 'Maier' },
         { id: 1067, firstName: 'Torsten', lastName: 'Wulf' }
