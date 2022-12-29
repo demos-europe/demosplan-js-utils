@@ -1,27 +1,71 @@
 import { formatDate } from '../utils/date'
 import dayjs from 'dayjs'
 
-describe('formatDate function', () => {
+describe('formatDate', () => {
+    const date = {
+        day: 25,
+        month: 12,
+        year: 2019,
+        time: '13:15:40.000000',
+        firstDay: '0' + 1
+    }
+
+    const dates = {
+        string: `${date.year}-${date.month}-${date.day} ${date.time}`,
+        number: 1577276140000,
+        date: `${date.year}-${date.month}-${date.day}T12:15:40.000Z`,
+    }
+
+    const transformedDates = {
+        short1: `${date.day}.${date.month}.${date.year}`,
+        short2: `${date.firstDay}.${date.month}.${date.year}`,
+        long:  `${date.day}.${date.month}.${date.year}, 13:15 Uhr`
+    }
+
+    const currentDate = dayjs().format('DD.MM.YYYY')
+
     it('sets the short date format as a default value', () => {
-        expect(formatDate('2019-09-25 13:15:40.000000')).toMatch('25.09.2019')
+        expect(formatDate(dates.string)).toMatch(transformedDates.short1)
+        expect(formatDate(dates.number)).toMatch(transformedDates.short1)
+        expect(formatDate(dates.date)).toMatch(transformedDates.short1)
     })
 
     it('sets the long date format if the "long" parameter is provided', () => {
-        expect(formatDate('2019-09-25 13:15:40.000000', 'long')).toMatch('25.09.2019, 13:15 Uhr')
+        expect(formatDate(dates.string, 'long')).toMatch(transformedDates.long)
+        expect(formatDate(dates.number, 'long')).toMatch(transformedDates.long)
+        expect(formatDate(dates.date, 'long')).toMatch(transformedDates.long)
     })
 
     it('transforms number to a string using \'DD.MM.YYYY\' format', () => {
-        expect(formatDate(1569369600000)).toMatch('25.09.2019')
+        expect(formatDate(dates.number)).toMatch(transformedDates.short1)
     })
 
-    it('transforms number to a string using a long \'DD.MM.YYYY, HH:mm [Uhr]\' format ', () => {
-        expect(formatDate(1569410140000, 'long')).toMatch('25.09.2019, 13:15 Uhr')
+    it('sets the \'DD.MM.YYYY\' date format if the provided date type is an instanceof date', () => {
+        expect(formatDate(dates.date)).toMatch(transformedDates.short1)
     })
 
-    it('sets the current date if the provided date is a null or undefined', () => {
-        const currentDate = dayjs().format('DD.MM.YYYY')
+    it('sets the \'DD.MM.YYYY\' date format if the provided date type is a string', () => {
+        expect(formatDate(dates.string)).toMatch(transformedDates.short1)
+    })
 
+    it('sets the current date if the provided date type is a null or undefined', () => {
         expect(formatDate(null)).toMatch(currentDate)
         expect(formatDate(undefined)).toMatch(currentDate)
+    })
+
+    it('transforms valid ISO 8601 date format types to DD.MM.YYYY format', () => {
+        const dateISOFormat = {
+            date1: date.year + '-' + date.month + '-' + date.day,
+            date2: date.year + '-' + date.month + '-' + date.day + 'T12:15:40.000Z',
+            date3: date.year + '-' + date.month + '-' + date.day + '13:15:40.000000',
+            date4: date.year + '-' + date.month,
+            date5: date.year + '/' + date.month
+        }
+
+        expect(formatDate(dateISOFormat.date1)).toEqual(transformedDates.short1)
+        expect(formatDate(dateISOFormat.date2, 'long')).toEqual(transformedDates.long)
+        expect(formatDate(dateISOFormat.date3, 'long')).toEqual(transformedDates.long)
+        expect(formatDate(dateISOFormat.date4)).toEqual(transformedDates.short2)
+        expect(formatDate(dateISOFormat.date5)).toEqual(transformedDates.short2)
     })
 })
