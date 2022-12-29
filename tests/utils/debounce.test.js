@@ -8,7 +8,7 @@ describe('debounce', () => {
         * Timers can be restored to their normal behavior with jest.useRealTimers().
         */
         jest.useFakeTimers()
-    });
+    })
     it('doesnt call the function if it has a waiting time', () => {
         const callback = jest.fn()
         const debounced = debounce(callback, 500)
