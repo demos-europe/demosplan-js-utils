@@ -1,6 +1,6 @@
-import { debounce } from "../../index"
+import { debounce } from '../../index'
 
-describe("debounce", () => {
+describe('debounce', () => {
     beforeEach(() => {
         /*
         * jest.useFakeTimers() enables fake timers.
