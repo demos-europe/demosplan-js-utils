@@ -56,16 +56,12 @@ describe('formatDate', () => {
     it('transforms valid ISO 8601 date format types to DD.MM.YYYY format', () => {
         const dateISOFormat = {
             date1: date.year + '-' + date.month + '-' + date.day,
-            date2: date.year + '-' + date.month + '-' + date.day + 'T12:15:40.000Z',
-            date3: date.year + '-' + date.month + '-' + date.day + '13:15:40.000000',
-            date4: date.year + '-' + date.month,
-            date5: date.year + '/' + date.month
+            date2: date.year + '-' + date.month,
+            date3: date.year + '/' + date.month
         }
 
         expect(formatDate(dateISOFormat.date1)).toEqual(transformedDates.short1)
-        expect(formatDate(dateISOFormat.date2, 'long')).toEqual(transformedDates.long)
-        expect(formatDate(dateISOFormat.date3, 'long')).toEqual(transformedDates.long)
-        expect(formatDate(dateISOFormat.date4)).toEqual(transformedDates.short2)
-        expect(formatDate(dateISOFormat.date5)).toEqual(transformedDates.short2)
+        expect(formatDate(dateISOFormat.date2)).toEqual(transformedDates.short2)
+        expect(formatDate(dateISOFormat.date3)).toEqual(transformedDates.short2)
     })
 })
