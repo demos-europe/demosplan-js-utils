@@ -24,7 +24,7 @@ describe('debounce', () => {
 
         jest.advanceTimersByTime(300)
         expect(callback).toBeCalledTimes(1)
-    });
+    })
 
     it('fires the callback, when immediate is true, no matter of the waiting time', () => {
         const callback = jest.fn();
@@ -46,5 +46,5 @@ describe('debounce', () => {
         jest.advanceTimersByTime(700)
         debounced()
         expect(callback).toBeCalledTimes(2)
-    });
-});
+    })
+})
