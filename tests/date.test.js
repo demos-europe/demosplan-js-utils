@@ -2,32 +2,28 @@ import { formatDate, toDate } from '../utils/date'
 import dayjs from 'dayjs'
 
 describe('date', () => {
+    const currentDate = dayjs().format('DD.MM.YYYY')
     let dateFormat
-
     const date = {
         day: 25,
-        month: 12,
-        year: 2019,
         firstDay: '0' + 1,
+        month: 12,
         time: {
             opt1: '13:15:40.000000',
             opt2: 'T12:15:40.000Z'
-        }
+        },
+        year: 2019
     }
-
     const dates = {
-        string: `${date.year}-${date.month}-${date.day} ${date.time.opt1}`,
+        date: new Date(`${date.year}-${date.month}-${date.day}${date.time.opt2}`),
         number: 1577276140000,
-        date: new Date(`${date.year}-${date.month}-${date.day}${date.time.opt2}`)
+        string: `${date.year}-${date.month}-${date.day} ${date.time.opt1}`
     }
-
     const transformedDates = {
-        long:  `${date.day}.${date.month}.${date.year}, 13:15 Uhr`
+        long:  `${date.day}.${date.month}.${date.year}, 13:15 Uhr`,
         short1: `${date.day}.${date.month}.${date.year}`,
-        short2: `${date.firstDay}.${date.month}.${date.year}`,
+        short2: `${date.firstDay}.${date.month}.${date.year}`
     }
-
-    const currentDate = dayjs().format('DD.MM.YYYY')
 
     it('sets the short date format as a default value', () => {
         expect(formatDate(dates.string)).toEqual(transformedDates.short1)
@@ -35,7 +31,7 @@ describe('date', () => {
         expect(formatDate(dates.date)).toEqual(transformedDates.short1)
     })
 
-    it('sets the long date format if the "long" parameter is provided', () => {
+    it('sets the long date format if the second parameter "long" is provided', () => {
         expect(formatDate(dates.string, 'long')).toEqual(transformedDates.long)
         expect(formatDate(dates.number, 'long')).toEqual(transformedDates.long)
         expect(formatDate(dates.date, 'long')).toEqual(transformedDates.long)

@@ -8,7 +8,6 @@ describe('uniqueArrayByObjectKey', () => {
         { id: 1035, firstName: 'Katharina', lastName: 'Maier' },
         { id: 1031, firstName: 'Daniel', lastName: 'Ostermann' }
     ]
-
     const uniqueArray = [
         { id: 1067, firstName: 'Torsten', lastName: 'Wulf' },
         { id: 1035, firstName: 'Katharina', lastName: 'Maier' },
@@ -19,8 +18,8 @@ describe('uniqueArrayByObjectKey', () => {
         expect(uniqueArrayByObjectKey(arrayDuplicateValues, 'id')).toEqual(uniqueArray)
     })
 
-    it('returns unchanged array if the property does not exist by the object', () => {
-        expect(uniqueArrayByObjectKey(arrayDuplicateValues, 'wrongParameter')).toEqual(arrayDuplicateValues)
+    it('returns unchanged array if the object does not contains the property', () => {
+        expect(uniqueArrayByObjectKey(arrayDuplicateValues, 'incorrectProperty')).toEqual(arrayDuplicateValues)
     })
 
     it('returns unchanged array if the property is null or undefined', () => {
