@@ -5,7 +5,7 @@ import fscreen from 'fscreen'
 describe('toggleFullscreen', () => {
     toggleFullscreen(HTMLElement)
     it('', () => {
-        expect(!fscreen.fullscreenEnabled).toBe(true)
+        expect(!fscreen.fullscreenEnabled).toBe(alert(`Error attempting to enable full-screen mode`))
     })
 
     it('', () => {

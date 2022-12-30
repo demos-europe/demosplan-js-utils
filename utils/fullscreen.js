@@ -15,9 +15,10 @@ import fscreen from 'fscreen'
  * @return Boolean {isFullscreen}
  */
 const toggleFullscreen = function (targetElement) {
+  console.log('das ist fullscreenfunction')
   // If the current browser does not support the fullscreen api, just return to prevent errors.
   if (!fscreen.fullscreenEnabled) {
-    return true
+    return alert(`Error attempting to enable full-screen mode`);
   }
 
   // Do the toggle (fullscreenElement either contains a dom reference or null if no element is in fullscreen mode)
