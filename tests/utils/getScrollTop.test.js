@@ -1,4 +1,4 @@
-import { getScrollTop} from '../../index'
+import { getScrollTop } from '../../index'
 
 describe('getScrollTop', () => {
     it('returns the scroll offset distance to 10', () => {
