@@ -10,23 +10,24 @@
 import fscreen from 'fscreen'
 
 /**
- * @param targetElement {HTMLElement} Standard Html Element or <svg> element
+ * @param targetElement {{prototype: HTMLElement; new(): HTMLElement}} Standard Html Element or <svg> element
  *
  * @return Boolean {isFullscreen}
  */
 const toggleFullscreen = function (targetElement) {
   // If the current browser does not support the fullscreen api, just return to prevent errors.
   if (!fscreen.fullscreenEnabled) {
-    return false
+    return true
   }
 
   // Do the toggle (fullscreenElement either contains a dom reference or null if no element is in fullscreen mode)
   if (fscreen.fullscreenElement === null) {
+    // If fullscreen mode isn't available, this value is false
     fscreen.requestFullscreen(targetElement)
-    return true
+    return false
   } else {
     fscreen.exitFullscreen()
-    return false
+    return true
   }
 }
 
