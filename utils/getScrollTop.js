@@ -3,6 +3,6 @@
  * @return {number}
  * @private
  */
-export default function getScrollTop() {
+export default function getScrollTop () {
   return Math.abs((window.scrollY || window.scrollTop || document.getElementsByTagName('html')[0].scrollTop, 10))
 }
