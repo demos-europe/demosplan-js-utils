@@ -46,7 +46,7 @@ describe('deepMerge', () => {
             }
         }
 
-        expect(deepMerge(target, source)).toBe(mergedTarget)
+        expect(deepMerge(target, source)).toEqual(mergedTarget)
     })
 
     it('merges properties of two objects (merges "controls" arrays inside an Object)', () => {
@@ -72,7 +72,7 @@ describe('deepMerge', () => {
             }
         }
 
-        expect(deepMerge(target, source)).toBe(mergedTarget)
+        expect(deepMerge(target, source)).toEqual(mergedTarget)
     })
 
     it('merges properties of two objects (merges "autoSuggest" Objects inside an Object)', () => {
@@ -101,7 +101,7 @@ describe('deepMerge', () => {
             }
         }
 
-        expect(deepMerge(target, source)).toBe(mergedTarget)
+        expect(deepMerge(target, source)).toEqual(mergedTarget)
     })
 })
 
