@@ -1,23 +1,22 @@
 import deepMerge from '../utils/deepMerge'
 
+let mergedTarget
 let source = {
-    hideDefaultLayer: true,
-    procedureExtent: false,
+    autoSuggest: {},
     controls: [],
-    autoSuggest: {}
+    hideDefaultLayer: true,
+    procedureExtent: false
 }
 
 let target = {
-    hideDefaultLayer: false,
-    procedureExtent: false,
-    controls: ['contr1', 'contr2'],
     autoSuggest: {
         enabled: true,
         serviceUrlPath: 'test-path1'
-    }
+    },
+    controls: ['contr1', 'contr2'],
+    hideDefaultLayer: false,
+    procedureExtent: false
 }
-
-let mergedTarget
 
 describe.each([
     { wrongType: 'test' },

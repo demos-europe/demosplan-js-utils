@@ -1,19 +1,18 @@
 import sortAlphabetically from '../utils/sortAlphabetically'
 
 describe('sortAlphabetically function', () => {
+    const filteredUsersByFirstName =  [
+        { id: 1031, firstName: 'Daniel', lastName: 'Ostermann' },
+        { id: 1035, firstName: 'Katharina', lastName: 'Maier' },
+        { id: 1067, firstName: 'Torsten', lastName: 'Wulf' }
+    ]
+    const mockArrayOfString = [ 'copySpec', 'email2', 'showlist', 'allowedRoleIds' ]
     const mockUsers = [
         { id: 1067, firstName: 'Torsten', lastName: 'Wulf' },
         { id: 1035, firstName: 'Katharina', lastName: 'Maier' },
         { id: 1031, firstName: 'Daniel', lastName: 'Ostermann' }
     ]
 
-    const mockArrayOfString = [ 'copySpec', 'email2', 'showlist', 'allowedRoleIds' ]
-
-    const filteredUsersByFirstName =  [
-        { id: 1031, firstName: 'Daniel', lastName: 'Ostermann' },
-        { id: 1035, firstName: 'Katharina', lastName: 'Maier' },
-        { id: 1067, firstName: 'Torsten', lastName: 'Wulf' }
-    ]
 
     it('returns an unchanged array if an object does not contain the given property', () => {
         expect(sortAlphabetically(mockUsers, 'phone')).toEqual(mockUsers)

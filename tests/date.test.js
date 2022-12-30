@@ -1,4 +1,4 @@
-import {formatDate, toDate} from '../utils/date'
+import { formatDate, toDate } from '../utils/date'
 import dayjs from 'dayjs'
 
 describe('date', () => {
@@ -22,9 +22,9 @@ describe('date', () => {
     }
 
     const transformedDates = {
+        long:  `${date.day}.${date.month}.${date.year}, 13:15 Uhr`
         short1: `${date.day}.${date.month}.${date.year}`,
         short2: `${date.firstDay}.${date.month}.${date.year}`,
-        long:  `${date.day}.${date.month}.${date.year}, 13:15 Uhr`
     }
 
     const currentDate = dayjs().format('DD.MM.YYYY')
