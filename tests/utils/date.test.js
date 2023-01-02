@@ -1,4 +1,4 @@
-import { formatDate, toDate } from '../utils/date'
+import { formatDate, toDate } from '../../utils/date'
 import dayjs from 'dayjs'
 
 describe('date', () => {
@@ -26,27 +26,27 @@ describe('date', () => {
     }
 
     it('sets the short date format as a default value', () => {
-        expect(formatDate(dates.string)).toEqual(transformedDates.short1)
-        expect(formatDate(dates.number)).toEqual(transformedDates.short1)
-        expect(formatDate(dates.date)).toEqual(transformedDates.short1)
+        expect(formatDate(dateTypes.IsoDate)).toEqual(transformedDates.short1)
+        expect(formatDate(dateTypes.timestampDate)).toEqual(transformedDates.short1)
+        expect(formatDate(dateTypes.exactDate)).toEqual(transformedDates.short1)
     })
 
     it('sets the long date format if the second parameter "long" is provided', () => {
-        expect(formatDate(dates.string, 'long')).toEqual(transformedDates.long)
-        expect(formatDate(dates.number, 'long')).toEqual(transformedDates.long)
-        expect(formatDate(dates.date, 'long')).toEqual(transformedDates.long)
+        expect(formatDate(dateTypes.IsoDate, 'long')).toEqual(transformedDates.long)
+        expect(formatDate(dateTypes.timestampDate, 'long')).toEqual(transformedDates.long)
+        expect(formatDate(dateTypes.exactDate, 'long')).toEqual(transformedDates.long)
     })
 
     it('transforms number to a string using \'DD.MM.YYYY\' format', () => {
-        expect(formatDate(dates.number)).toEqual(transformedDates.short1)
+        expect(formatDate(dateTypes.timestampDate)).toEqual(transformedDates.short1)
     })
 
     it('sets the \'DD.MM.YYYY\' date format if the provided date type is an instanceof Date', () => {
-        expect(formatDate(dates.date)).toEqual(transformedDates.short1)
+        expect(formatDate(dateTypes.exactDate)).toEqual(transformedDates.short1)
     })
 
     it('sets the \'DD.MM.YYYY\' date format if the provided date type is a string', () => {
-        expect(formatDate(dates.string)).toEqual(transformedDates.short1)
+        expect(formatDate(dateTypes.IsoDate)).toEqual(transformedDates.short1)
     })
 
     it('sets the current date if the provided date type is a null or undefined', () => {
@@ -67,11 +67,11 @@ describe('date', () => {
     })
 
     it('transforms string to a Date', () => {
-        expect(toDate(dates.string)).toEqual(dates.date)
+        expect(toDate(dateTypes.IsoDate)).toEqual(dateTypes.exactDate)
     })
 
     it('transforms number to a Date', () => {
-        expect(toDate(dates.number)).toEqual(dates.date)
+        expect(toDate(dateTypes.timestampDate)).toEqual(dateTypes.exactDate)
     })
 
     it('transforms valid ISO 8601 date format type to a Date', () => {
@@ -79,6 +79,6 @@ describe('date', () => {
             date: date.year + '/' + date.month + '/' + date.day + date.time.opt1
         }
 
-        expect(toDate(dateFormat.date)).toEqual(dates.date)
+        expect(toDate(dateFormat.date)).toEqual(dateTypes.exactDate)
     })
 })
