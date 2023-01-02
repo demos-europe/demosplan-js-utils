@@ -14,10 +14,10 @@ describe('date', () => {
         },
         year: 2019
     }
-    const dates = {
-        date: new Date(`${date.year}-${date.month}-${date.day}${date.time.opt2}`),
-        number: 1577276140000,
-        string: `${date.year}-${date.month}-${date.day} ${date.time.opt1}`
+    const dateTypes = {
+        exactDate: new Date(`${date.year}-${date.month}-${date.day}${date.time.opt2}`),
+        timestampDate: 1577276140000,
+        IsoDate: `${date.year}-${date.month}-${date.day} ${date.time.opt1}`
     }
     const transformedDates = {
         long:  `${date.day}.${date.month}.${date.year}, 13:15 Uhr`,
